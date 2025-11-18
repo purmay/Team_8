@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Book myBook = new Book("null", "null", "null", "null");
+        Book myBook = new Book("null", "null", "null");
         while (true) {
             System.out.println("-----------------");
             System.out.println("1. 도서 정보 저장");
@@ -13,14 +13,13 @@ public class Main {
             System.out.print("입력: ");
             int option = sc.nextInt();
             sc.nextLine();
-            System.out.println("-----------------");
 
             if (option == 1) {
                 myBook.BookSave();
             } else if (option == 2) {
                 myBook.BookSearch();
             } else if (option == 3) {
-                System.out.println("아직 구현되지 않은 기능입니다.");
+                myBook.BookReview();
             } else if (option == 0) {
                 System.out.println("종료합니다.");
                 break;
